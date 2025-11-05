@@ -40,6 +40,7 @@ Executemany, lastrowid and rowcount:
 sql = 'INSERT INTO my_tbl (name, age) VALUES (%s, %s)'
 values = [('Sam', 43), ('Anna', 28)]
 cursor.executemany(sql, values)
+my_db.commit()
 print(cursor.lastrowid)  # return ID of last inserted row
 print(cursor.rowcount)   # return how many rows inserted
 ```
